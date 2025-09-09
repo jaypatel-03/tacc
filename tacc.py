@@ -30,7 +30,7 @@ class Instruments:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
-ENDPOINT = 'http://pplxatlasitk01.nat.physics.ox.ac.uk:8086'
+ENDPOINT = 'http://pplxatlasitk02.nat.physics.ox.ac.uk:8086'
 
 def pelts_read(pelts) -> list:
     peltier_on = []
@@ -339,8 +339,8 @@ def ramp_down(instruments : Instruments, fl, interlock_condition, HEADER, write_
         logging.warning("45 minute pause to allow chiller to begin cooling")
         time.sleep(45*60)
     elif pelt_temperature_now - min_temp > 10:
-        logging.warning("Five minute pause to allow chiller to begin cooling")
-        time.sleep(5*60)
+        logging.warning("Seven minute pause to allow chiller to begin cooling")
+        time.sleep(7*60)
     
     pelts_on_off(instruments.pelts, True)
         
