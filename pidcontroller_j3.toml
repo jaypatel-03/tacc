@@ -1,0 +1,19 @@
+[[pidcontroller]]
+power_instrument = "HMP4040"
+power_resource = "ASRL/dev/ttyHMP4040b"
+power_channel = 3
+power_type = "current"
+measure_instrument = "ITkDCSInterlock"
+measure_resource = "TCPIP::localhost::9898::SOCKET"
+measure_channel = 3
+measure_type = "NTC:TEMP"
+simulate = false
+Kp = -1.5
+Ki = -0.085
+Kd = -0.01
+setpoint = 15                # degrees C
+starting_output = 0.0        # amps
+sample_time = 0.5            # seconds
+output_limits = [ 0.0, 4.0 ]  # amps
+proportional_on_measurement = false
+differential_on_measurement = true
